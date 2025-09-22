@@ -1,7 +1,14 @@
 
-if __name__ == '__main__':
-    html_content = build_page()
-    with open('contact.html', 'w', encoding='utf-8') as f:
-        f.write(html_content)
-    print("contact.html has been created. Open it in your browser.")
+
+def show_status(message):
+    status_container = document.createElement("div")
+    status_container.className = "status"
+    status_container.innerText = message
+    document.body.appendChild(status_container)
+
+def submit_contact_form():
+    show_status("Thanks! Your message has been sent.")
+
+show_status("Welcome to Benjie's Music Store!")
+
 
